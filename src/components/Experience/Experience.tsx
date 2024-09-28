@@ -15,72 +15,37 @@ const Experience = () => {
   return (
     <div
       id="Experience"
-      className="text-white md:flex m-20 overflow-hidden items-center md:flex-wrap md:justify-center  shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12 bg-[#E6B9A6]">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Experience</h1>
-      <div className="flex flex-wrap items-center justify-around">
-        <div className="flex flex-wrap md:w-2/5 gap-8 md:p-12 py-10">
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaHtml5 color="#E34F26" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaCss3 color="#1572B6" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaReact color="#61DAFB" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaJs color="#F7DF1E" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaDocker color="#F24E1E" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <SiMongodb color="#47A248" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <SiRedis color="#FF4438" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <SiNextdotjs color="#FF4438" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <FaNodeJs color="#FF4438" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <DiPostgresql color="#FF4438" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <AiOutlineKubernetes color="#FF4438" size={50} />
-          </span>
-          <span className="p-3 bg-[#697565] flex items-center rounded-2xl">
-            <SiApachekafka color="#FF4438" size={50} />
-          </span>
+      className="text-white flex flex-col items-center m-4 md:m-20 overflow-hidden shadow-xl bg-[#E6B9A6] bg-opacity-30 rounded-lg p-6 md:p-12"
+    >
+      <h1 className="text-3xl md:text-4xl font-bold mb-6">Experience</h1>
+      <div className="flex flex-wrap items-center justify-center md:justify-around">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10">
+          {[FaHtml5, FaCss3, FaReact, FaJs, FaDocker, SiMongodb, SiRedis, SiNextdotjs, FaNodeJs, DiPostgresql, AiOutlineKubernetes, SiApachekafka].map((Icon, index) => (
+            <span key={index} className="p-4 bg-[#697565] flex items-center justify-center rounded-2xl hover:shadow-lg transition duration-300">
+              <Icon color="#FFFFFF" size={50} />
+            </span>
+          ))}
         </div>
 
-        <div>
-          <div className="flex gap-10 bg-[#697565] bg-opacity-45 mt-4 rounded-lg p-10 items-center  ">
-            <span className="text-white">
-              <h2 className="leading-tight">Gonardweb Technologies</h2>
-              <p className="text-sm leading-tight font-thin">
-                July 2024 - Sept 2024
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as Web Designer Intern</li>
-              </ul>
-            </span>
-          </div>
-
-          <div className="flex gap-10 bg-[#697565] bg-opacity-45 mt-4 rounded-lg p-10 items-center">
-            <span className="text-white">
-              <h2 className="leading-tight">GirlScript Summer of Code</h2>
-              <p className="text-sm leading-tight font-thin">
-                May 2024 - July 2024
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as Contributor.</li>
-              </ul>
-            </span>
-          </div>
+        <div className="flex flex-col md:w-1/2 mt-6 md:mt-0">
+          {[{
+            title: "Gonardweb Technologies",
+            date: "July 2024 - Sept 2024",
+            role: "- Work as Web Designer Intern",
+          },
+          {
+            title: "GirlScript Summer of Code",
+            date: "May 2024 - July 2024",
+            role: "- Work as Contributor.",
+          }].map((experience, index) => (
+            <div key={index} className="flex gap-10 bg-[#697565] bg-opacity-45 mt-4 rounded-lg p-8 items-center hover:bg-opacity-60 transition duration-300">
+              <span className="text-white">
+                <h2 className="text-lg font-semibold leading-tight">{experience.title}</h2>
+                <p className="text-sm font-thin leading-tight">{experience.date}</p>
+                <ul className="text-sm p-2">{experience.role}</ul>
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
