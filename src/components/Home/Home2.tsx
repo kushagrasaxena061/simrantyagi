@@ -9,7 +9,7 @@ const Home2 = () => {
           <TextChange />
         </h1>
         <p className="text-sm md:text-2xl tracking-tight italic my-4">
-          I'm a passionate Full Stack Web Developer, eager to explore limitless
+          I&apos;m a passionate Full Stack Web Developer, eager to explore limitless
           possibilities of web development and infusing it with a touch of
           creativity. I thrive on tackling challenges head-on and turning
           innovative ideas into practical solutions.
