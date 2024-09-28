@@ -1,15 +1,20 @@
+
+
 import React from "react";
 
-const ProjectCard = ({ title, main }: any) => {
+interface ProjectCardProps {
+  title: string;
+  main: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, main }) => {
   return (
-    <div className="p-3 md:p-6 flex flex-col w-80 bg-[#D8A25E] shadow-xl shadow-slate-900 rounded-2xl">
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
-        {title}
-      </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 md:p-4 flex gap-2 md:gap-4"></div>
+    <div className="bg-[#D8A25E] shadow-lg rounded-lg p-6 flex flex-col justify-between items-center w-full sm:w-72 md:w-80 lg:w-96 h-auto transition-all duration-300 hover:shadow-xl">
+      <h2 className="text-lg font-bold text-center text-gray-800">{title}</h2>
+      <p className="text-sm text-center text-gray-100 font-semibold">{main}</p>
     </div>
   );
 };
 
 export default ProjectCard;
+

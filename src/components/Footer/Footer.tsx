@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <div
       id="Footer"
-      className="flex flex-col md:flex-row justify-around bg-gray-800 text-white p-10 md:p-12 items-center mt-28 shadow-lg rounded-lg"
+      className="flex flex-col md:flex-row justify-around bg-gray-800 text-white p-10 md:p-12 items-center mt-0 shadow-lg rounded-lg"
     >
       <div>
         <h1 className="text-3xl md:text-5xl font-bold text-slate-200 mb-4">Contact</h1>
